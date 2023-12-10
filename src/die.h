@@ -1,5 +1,8 @@
+#include <iostream>
 #include <ctime> // for time
 #include <cstdlib> // for rand() and srand()
+#ifndef DIE_H
+#define DIE_H
 
 //
 
@@ -10,7 +13,7 @@ class Die
     {
         // Seed the random number generator with the current time
         srand(static_cast<unsigned int>(time(nullptr)));
-    }
+    };
     void roll();
     int rolled_value() const{return roll_value;}
 
@@ -19,3 +22,5 @@ class Die
     int sides{6};
 
 };
+
+#endif
