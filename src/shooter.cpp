@@ -11,7 +11,7 @@ using std::ostream;
 
 std::ostream &operator<<(ostream &os, const Shooter &shooter)
 {
-    os << "Q3 - Shooter Rolls : ";
+    os << " Shooter Overload Rolls : ";
     for (const Roll *roll : shooter.rolls)
     {
         os << "  " << roll->roll_value();
